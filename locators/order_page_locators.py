@@ -11,8 +11,6 @@ class TestOrderFormLocators:
     ADDRESS_INPUT = By.XPATH, ".//input[@placeholder='* Адрес: куда привезти заказ']"
     # Поле станция метро
     UNDERGROUND_STATION = By.XPATH, ".//input[@placeholder='* Станция метро']"
-    # Выпадающий список
-    UNDERGROUND_STATION_LIST = By.XPATH, "//*[@id='root']/div/div[2]/div[2]/div[4]/div/div/input"
     # Выбор станции
     SELECT_UNDERGROUND = (By.XPATH, ".//li[@class='select-search__row']")
     # Телефон
@@ -22,16 +20,16 @@ class TestOrderFormLocators:
 
 
     # Про аренду серый
-    TITLE_ABOUT_RENT_FORM = By.XPATH, "//*[@id='root']/div/div[2]/div[1]"
+    TITLE_ABOUT_RENT_FORM = By.XPATH, "//div[contains(@class, 'Order_Header__BZXOb') and text()='Про аренду']"
     # Когда привести самокат
     DELIVERY_DATE_INPUT = By.XPATH, "//input[@placeholder='* Когда привезти самокат']"
     # Календарь
-    CALENDAR_DELIVERY_DATE = By.XPATH, "//*[@id='root']/div/div[2]/div[2]/div[1]/img"
+    CALENDAR_DELIVERY_DATE = By.XPATH, "//div[contains(@class, 'react-datepicker')]"
     # Срок аренды
     RENTAL_DURATION = By.XPATH, ".//div[text()='* Срок аренды']"
-    RENTAL_DURATION_LIST = By.XPATH, "/html/body/div/div/div[2]/div[2]/div[2]/div[2]"
+    RENTAL_DURATION_LIST = By.XPATH, "//div[contains(@class, 'Dropdown-menu') and @aria-expanded='true']"
     # Двое суток
-    LISTED_RENTAL_PERIOD = By.XPATH, "//*[@id='root']/div/div[2]/div[2]/div[2]/div[2]/div[2]"
+    LISTED_RENTAL_PERIOD = By.XPATH, "//div[contains(@class, 'Dropdown-option') and text()='двое суток']"
     # Цвет самоката
     CHOOSE_COLOUR = By.XPATH, "//div[text()='Цвет самоката']"
     # Цвет серый
@@ -43,7 +41,7 @@ class TestOrderFormLocators:
 
 
     # Форма Хотите оформить заказ?
-    CONFIRM_ORDER_FORM = By.XPATH, "//*[@id='root']/div/div[2]/div[5]/div[1]"
+    CONFIRM_ORDER_FORM = By.XPATH, "//div[contains(@class, 'Order_ModalHeader__3FDaJ')]"
     # Кнопка Да
     YES_BUTTON_CONFIRM_ORDER = By.XPATH, "//button[text()='Да']"
 

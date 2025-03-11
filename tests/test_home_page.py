@@ -31,14 +31,14 @@ class TestHomePageSamokat:
     @allure.description('Проверка, что при нажатии на логотип Яндекс, произойдет переход на главную страницу Дзен')
     def test_clicking_yandex_logo_opens_dzen_page(self, driver, home_page):
         home_page.click_yandex_logo_opens_dzen_page()
-        assert driver.current_url == Data.DZEN_PAGE_URL
+        assert home_page.get_current_url() == Data.DZEN_PAGE_URL
 
     @allure.title('Проверка нажатии на логотип Самокат')
     @allure.description('Проверка, что при нажатии на логотип Самокат, произойдет переход на главную страницу Самокат')
     def test_clicking_samokat_logo_opens_main_samokat_page(self, driver, home_page):
         home_page.click_order_button_header()
         home_page.click_samokat_logo_opens_main_samokat_page()
-        assert driver.current_url == Data.MAIN_PAGE_URL
+        assert home_page.get_current_url() == Data.MAIN_PAGE_URL
 
 
 

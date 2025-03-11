@@ -42,6 +42,11 @@ class BasePage:
         element.send_keys(text)
 
 
+    @allure.step('Получаем адрес страницы')
+    def get_current_url(self):
+        return self.driver.current_url
+
+
 
 
 

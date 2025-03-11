@@ -5,7 +5,7 @@ class HomePageLocators:
 
     # Навигация по странице
     ORDER_BUTTON_HEADER = By.XPATH, ".//button[text() = 'Заказать']" # Кнопка заказать в хедере
-    ORDER_BUTTON_BODY = By.XPATH, "//*[@id='root']/div/div[1]/div[4]/div[2]/div[5]/button" # Кнопка Заказать в теле страницы
+    ORDER_BUTTON_BODY = By.XPATH, "//button[contains(@class, 'Button_Middle__1CSJM') and contains(text(), 'Заказать')]" # Кнопка Заказать в теле страницы
     FAQ = By.XPATH, ".//div[text()= 'Вопросы о важном']" # Вопросы о важном
     LOGO_SAMOKAT = By.XPATH, "//a[@href='/' and contains(@class, 'Header_LogoScooter')]" # Логотип Самокат
     LOGO_YANDEX = By.XPATH, "//a[@href='//yandex.ru' and contains(@class, 'Header_LogoYandex')]" # Логотип Яндекс

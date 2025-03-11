@@ -1,8 +1,11 @@
 class Data:
 
     #URLS
-    MAIN_PAGE_URL = "https://qa-scooter.praktikum-services.ru/"
-    ORDER_PAGE_URL = "https://qa-scooter.praktikum-services.ru/order"
+    BASE_URL = "https://qa-scooter.praktikum-services.ru"
+
+    # URLs
+    MAIN_PAGE_URL = f"{BASE_URL}/"
+    ORDER_PAGE_URL = f"{BASE_URL}/order"
     DZEN_PAGE_URL = "https://dzen.ru/?yredirect=true"
 
     #FAQ expected_text

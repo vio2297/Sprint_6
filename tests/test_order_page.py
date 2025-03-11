@@ -14,7 +14,7 @@ class TestPositiveOrderForm:
         order_page.personal_information_input(name, last_name, address, station, number)
         order_page.rental_information_input(date, comment)
         order_page.click_yes_on_confirm_order_form()
-        assert driver.find_element(*TestOrderFormLocators.COMPLETE_ORDER_BUTTON).is_displayed()
+        assert order_page.is_order_complete_button_displayed()
 
     @allure.title('Проверка позитивного сценария для заказа самоката через кнопку Заказать в теле страницы')
     @allure.description('Проверка перехода в форму заказа через нажатие кнопки "Заказать" в теле страницы и успешного оформления заказа')
@@ -25,8 +25,7 @@ class TestPositiveOrderForm:
         order_page.personal_information_input(name, last_name, address, station, number)
         order_page.rental_information_input(date, comment)
         order_page.click_yes_on_confirm_order_form()
-        assert driver.find_element(*TestOrderFormLocators.COMPLETE_ORDER_BUTTON).is_displayed()
-
+        assert order_page.is_order_complete_button_displayed()
 
 
 
